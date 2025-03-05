@@ -17,4 +17,6 @@ Makefile
 *.d
 config.log
 config.status
-
+test
+test.*
+test/
