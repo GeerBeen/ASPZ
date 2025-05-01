@@ -1,0 +1,25 @@
+==70== Memcheck, a memory error detector
+==70== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==70== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==70== Command: ./program
+==70== 
+Hello, Leak!
+==70== 
+==70== HEAP SUMMARY:
+==70==     in use at exit: 13 bytes in 1 blocks
+==70==   total heap usage: 2 allocs, 1 frees, 4,109 bytes allocated
+==70== 
+==70== 13 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==70==    at 0x48417B4: malloc (vg_replace_malloc.c:381)
+==70==    by 0x48F7999: strdup (strdup.c:42)
+==70==    by 0x401147: main (13.c:5)
+==70== 
+==70== LEAK SUMMARY:
+==70==    definitely lost: 13 bytes in 1 blocks
+==70==    indirectly lost: 0 bytes in 0 blocks
+==70==      possibly lost: 0 bytes in 0 blocks
+==70==    still reachable: 0 bytes in 0 blocks
+==70==         suppressed: 0 bytes in 0 blocks
+==70== 
+==70== For lists of detected and suppressed errors, rerun with: -s
+==70== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
